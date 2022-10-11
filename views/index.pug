@@ -1,0 +1,54 @@
+DOCTYPE
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chat</title>
+	<link rel="stylesheet", href="css/style.css">
+	<link rel="stylesheet", href="css/bootstrap.min.css">
+	<script src="js/bootstrap.min.js" defer></script>
+	<script src="js/jquery.js" defer></script>
+</head>
+<body>
+	<div class="container">
+		//- <div class="col">В чате есть:</div>
+	</div>
+	<div class="container">
+		<div class="col-md-auto">
+			<h1 class="text-center">Добро пожаловать в Чат</h1>
+			<div class='chat'>
+				<div class='chat-messages'>
+					<div class='chat-messages__content' id='messages'>
+					//- <div>Загрузка...</div>
+					</div>
+				</div>
+				<div class='chat-input'>
+					<form action='/sendMessage' method='post' id='chat-form'>
+						<input type='text' id='message-text' class='chat-form__input' placeholder='Введите сообщение' name='message'> <input type='submit' class='chat-form__submit' value='=>'>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		//- <div class="col">Сейчас в сети:</div>
+	</div>
+
+
+	//- <div class='chat'>
+	//- 	<div class='chat-messages'>
+	//- 		<div class='chat-messages__content' id='messages'>
+	//- 		//- <div>Загрузка...</div>
+	//- 		</div>
+	//- 	</div>
+	//- 	<div class='chat-input'>
+	//- 		<form action='/sendMessage' method='post' id='chat-form'>
+	//- 			<input type='text' id='message-text' class='chat-form__input' placeholder='Введите сообщение' name='message'> <input type='submit' class='chat-form__submit' value='=>'>
+	//- 		</form>
+	//- 	</div>
+	//- </div>
+
+	<script src="js/socket.io.js"></script>
+	<script src="js/logical.js"></script>
+</body>
+</html>
