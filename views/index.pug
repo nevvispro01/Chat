@@ -10,30 +10,37 @@ DOCTYPE
 	<script src="js/jquery.js" defer></script>
 </head>
 <body>
-	<div class="container">
-		//- <div class="col">В чате есть:</div>
-	</div>
-	<div class="container">
-		<div class="col-md-auto">
-			<h1 class="text-center">Добро пожаловать в Чат</h1>
-			<div class='chat'>
-				<div class='chat-messages'>
-					<div class='chat-messages__content' id='messages'>
-					//- <div>Загрузка...</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col">
+			<h2 class="text-center">Все участники</h2>
+			<div class="vright"></div>
+			</div>
+			<div class="col-8">
+				<h1 class="text-center">Добро пожаловать в Чат</h1>
+				<div class='chat'>
+					<div class='chat-messages'>
+						<div class='chat-messages__content' id='messages'>
+						//- <div>Загрузка...</div>
+						</div>
+					</div>
+					<div class='chat-input'>
+						<form action='/sendMessage' method='post' id='chat-form'>
+							<input type='text' id='message-text' class='chat-form__input' placeholder='Введите сообщение' name='message'> <input type='submit' class='chat-form__submit' value='=>'>
+						</form>
 					</div>
 				</div>
-				<div class='chat-input'>
-					<form action='/sendMessage' method='post' id='chat-form'>
-						<input type='text' id='message-text' class='chat-form__input' placeholder='Введите сообщение' name='message'> <input type='submit' class='chat-form__submit' value='=>'>
-					</form>
-				</div>
+			</div>
+			<div class="col">
+			<h2 class="text-center">В сети</h2>
+			<div class="vleft"></div>
 			</div>
 		</div>
 	</div>
-	<div class="container">
-		//- <div class="col">Сейчас в сети:</div>
-	</div>
-
+	<script src="js/socket.io.js"></script>
+	<script src="js/logical.js"></script>
+</body>
+</html>
 
 	//- <div class='chat'>
 	//- 	<div class='chat-messages'>
@@ -47,8 +54,3 @@ DOCTYPE
 	//- 		</form>
 	//- 	</div>
 	//- </div>
-
-	<script src="js/socket.io.js"></script>
-	<script src="js/logical.js"></script>
-</body>
-</html>
